@@ -1,6 +1,6 @@
 # cpp-template
 
-C++ boilerplate with conan and meson
+ - C++ boilerplate with meson build system
 
 # Build
 
