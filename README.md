@@ -1,8 +1,8 @@
 # cpp-template
 
-![Linux](https://github.com/Lucashw68/cpp-template/workflows/Linux/badge.svg)
-![Macos](https://github.com/Lucashw68/cpp-template/workflows/Macos/badge.svg)
-![Windows](https://github.com/Lucashw68/cpp-template/workflows/Windows/badge.svg)
+![Linux](https://github.com/Lucashw68/cpp-template/workflows/linux/badge.svg)
+![Macos](https://github.com/Lucashw68/cpp-template/workflows/macos/badge.svg)
+![Windows](https://github.com/Lucashw68/cpp-template/workflows/windows/badge.svg)
 
  - Cross-platform C++ boilerplate with meson build system
 
