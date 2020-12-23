@@ -21,10 +21,11 @@ jobs:
       with:
         python-version: '3.x'
     - run: pip install meson ninja
-    - run: meson setup Dist/
-      env:
-        CC: gcc
-    - run: cd Dist/ && ninja
+    - run: ./build
+    # - run: meson setup Dist/
+    #   env:
+    #     CC: gcc
+    # - run: cd Dist/ && ninja
     - run: meson test -C Dist/ -v
     - uses: actions/upload-artifact@v1
       if: failure()
