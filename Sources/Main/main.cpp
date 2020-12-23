@@ -5,6 +5,5 @@ int main(int ac, char **av) {
   (void)av;
 
   std::cout << "Hello world" << std::endl;
-  std::cout << "CI Test Windows 1" << std::endl;
   return 0;
 }
