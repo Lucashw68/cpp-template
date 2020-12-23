@@ -1,7 +1,5 @@
 #include "main.hpp"
 
-// Trigger actions commit
-
 int main(int ac, char **av) {
   (void)ac;
   (void)av;
