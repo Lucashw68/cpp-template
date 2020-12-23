@@ -1,8 +1,3 @@
-/*
-** LUCASHW PROJECT, 2020
-** cpp-template
-*/
-
 #include "main.hpp"
 
 int main(int ac, char **av) {
