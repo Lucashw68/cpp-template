@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 function printUsage() {
   echo "${help}" 1>&2
@@ -31,7 +31,11 @@ function clean() {
 }
 
 binary_name=template
-build_dir=Build
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  build_dir=Build
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  build_dir=Dist
+fi
 help="Usage: ./clean"
 if [[ "$#" -gt "1" || "$1" = "-h" ]]
 then
