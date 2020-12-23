@@ -1,6 +1,6 @@
 /*
 ** LUCASHW PROJECT, 2020
-** cpp-template
+*** cpp-template
 */
 
 #include "main.hpp"

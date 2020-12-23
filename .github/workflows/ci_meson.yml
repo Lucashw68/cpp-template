@@ -28,7 +28,7 @@ jobs:
       if: failure()
       with:
         name: Linux_Meson_Testlog
-        path: build/meson-logs/testlog.txt
+        path: Build/meson-logs/testlog.txt
 
   macos:
     runs-on: macos-latest
@@ -38,15 +38,15 @@ jobs:
       with:
         python-version: '3.x'
     - run: pip install meson ninja
-    - run: meson setup Build/
+    - run: meson setup Dist/
       env:
         CC: gcc
-    - run: meson test -C Build/ -v
+    - run: meson test -C Dist/ -v
     - uses: actions/upload-artifact@v1
       if: failure()
       with:
         name: MacOS_Meson_Testlog
-        path: build/meson-logs/testlog.txt
+        path: Dist/meson-logs/testlog.txt
 
   windows:
     runs-on: windows-latest
@@ -56,12 +56,12 @@ jobs:
       with:
         python-version: '3.x'
     - run: pip install meson ninja
-    - run: meson setup Build/
+    - run: meson setup Dist/
       env:
         CC: gcc
-    - run: meson test -C Build/ -v
+    - run: meson test -C Dist/ -v
     - uses: actions/upload-artifact@v1
       if: failure()
       with:
         name: Windows_Meson_Testlog
-        path: build/meson-logs/testlog.txt
+        path: Dist/meson-logs/testlog.txt
