@@ -6,22 +6,28 @@
 
  - Cross-platform C++ boilerplate with meson build system
 
-# Build
+# Linux / MacOS
 
+ - Build
 ```
 chmod +x ./build
 ./build
 ```
 
-# Clean
-
+ - Clean
 ```
 chmod +x ./clean
 ./clean
 ```
+# Windows
 
-# Launch
+ - Build
+ ```
+ meson setup Dist/
+ cd Dist/ && ninja
+ ```
 
-```
-./template
-```
+ - Clean
+ ```
+ rd /s /q "Dist"
+ ```
