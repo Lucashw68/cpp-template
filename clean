@@ -1,0 +1,40 @@
+#!/bin/bash
+
+function printUsage() {
+  echo "${help}" 1>&2
+  exit 1
+}
+
+function printColor() {
+  COLOR='\033[1;92m'
+  NC='\033[0m'
+  echo -e ${COLOR}"[$1]"${NC}
+}
+
+function parsing() {
+  args=("$@")
+  checkBuild
+  clean
+}
+
+function checkBuild() {
+  if [[ ! -d "$build_dir" ]]
+  then
+    printColor "Nothing to clean"
+    exit 0
+  fi
+}
+
+function clean() {
+  rm $binary_name
+  rm -rf $build_dir
+}
+
+binary_name=template
+build_dir=Build
+help="Usage: ./clean"
+if [[ "$#" -gt "1" || "$1" = "-h" ]]
+then
+  printUsage
+fi
+parsing $@

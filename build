@@ -1,0 +1,50 @@
+#!/bin/bash
+
+function printUsage() {
+  echo "${help}" 1>&2
+  exit 1
+}
+
+function printColor() {
+  COLOR='\033[1;92m'
+  NC='\033[0m'
+  echo -e ${COLOR}"[$1]"${NC}
+}
+
+function parsing() {
+  args=("$@")
+  checkBuild
+}
+
+function checkBuild() {
+  if [[ ! -d "$build_dir" ]]
+  then
+    setup
+  else
+    build
+  fi
+}
+
+function setup() {
+  if [[ -d "$build_dir" ]]
+  then
+    ./clean
+  fi
+  printColor "Setup"
+  meson setup $build_dir
+  build
+}
+
+function build() {
+  printColor "Building"
+  cd $build_dir && ninja && mv $binary_name ..
+}
+
+binary_name=template
+build_dir=Build
+help="Usage: ./build"
+if [[ "$#" -gt "1" || "$1" = "-h" ]]
+then
+  printUsage
+fi
+parsing $@
