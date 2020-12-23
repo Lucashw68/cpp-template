@@ -1,8 +1,10 @@
 # cpp-template
 
-![ci_meson](https://github.com/Lucashw68/cpp-template/workflows/ci_meson/badge.svg)
+![Linux](https://github.com/Lucashw68/cpp-template/workflows/Linux/badge.svg)
+![Macos](https://github.com/Lucashw68/cpp-template/workflows/Macos/badge.svg)
+![Windows](https://github.com/Lucashw68/cpp-template/workflows/Windows/badge.svg)
 
- - C++ boilerplate with meson build system
+ - Cross-platform C++ boilerplate with meson build system
 
 # Build
 
